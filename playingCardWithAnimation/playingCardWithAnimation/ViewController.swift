@@ -68,7 +68,7 @@ class ViewController: UIViewController {
                                             options: [],
                                             animations: {
                                                 self.faceUpCardViews.forEach {
-                                                    $0.transform = CGAffineTransform.identity.scaledBy(x: 3, y: 3)
+                                                    $0.transform = CGAffineTransform.identity.scaledBy(x: 3.0, y: 3.0)
                                                 }
                                             },
                                             completion: { position in
@@ -121,7 +121,12 @@ class ViewController: UIViewController {
 
 public extension CGFloat {
     var arc4random: CGFloat {
-        return CGFloat(Float(arc4random_uniform(UInt32(self))))
+        if self > 0 {
+            return CGFloat(arc4random_uniform(UInt32(self)))
+        } else if self <  0 {
+            return -CGFloat(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return 0
+        }
     }
-    
 }
