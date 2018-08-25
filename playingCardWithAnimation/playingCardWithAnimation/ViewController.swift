@@ -99,11 +99,18 @@ class ViewController: UIViewController {
                                                               options: [.transitionFlipFromLeft],
                                                               animations: {
                                                                 cardView.isFaceUp = false
-                                            }
+                                                              },
+                                                              completion: { finished in
+                                                                self.cardBehavior.addItem(cardView)
+                                                              }
                                             )
                                         }
+                                    } else {
+                                        if !chosenCardView.isFaceUp {
+                                            self.cardBehavior.addItem(chosenCardView)
+                                        }
                                     }
-                }
+                    }
                 )
             }
             
