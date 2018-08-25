@@ -4,7 +4,11 @@
 //
 //  Created by 임지후 on 2018. 8. 24..
 //  Copyright © 2018년 임지후. All rights reserved.
-//  @IBDesignable : Main.storyboard에서 실시간으로 디자인 결과를 볼 수 있는 설정
+//  Main.storyboard에서 실시간으로 custom class의 디자인 결과를 볼 수 있는 설정
+//  1. 해당 클래스 상단에 @IBDesignable 속성 추가
+//  2. main.storyboard에서 각 view의 attribute inspector >
+//      1) view: Content Mode combo box에서 redraw 선택
+//      2) draw: opaque 체크해제
 
 import UIKit
 
