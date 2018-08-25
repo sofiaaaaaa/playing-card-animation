@@ -17,6 +17,7 @@
 		A1555499213046D9009988AE /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1555498213046D9009988AE /* PlayingCardView.swift */; };
 		A155549B2130489F009988AE /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155549A2130489F009988AE /* PlayingCardDeck.swift */; };
 		A155549D213048D5009988AE /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155549C213048D5009988AE /* PlayingCard.swift */; };
+		A171C97D21310E30008A231C /* CardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171C97C21310E30008A231C /* CardBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A1555498213046D9009988AE /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 		A155549A2130489F009988AE /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 		A155549C213048D5009988AE /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
+		A171C97C21310E30008A231C /* CardBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				A1555498213046D9009988AE /* PlayingCardView.swift */,
 				A155549C213048D5009988AE /* PlayingCard.swift */,
 				A155546D21304393009988AE /* Main.storyboard */,
+				A171C97C21310E30008A231C /* CardBehavior.swift */,
 				A1555497213043B9009988AE /* Supporting File */,
 				A155547521304394009988AE /* Info.plist */,
 			);
@@ -278,6 +281,7 @@
 				A155549B2130489F009988AE /* PlayingCardDeck.swift in Sources */,
 				A1555499213046D9009988AE /* PlayingCardView.swift in Sources */,
 				A155546A21304393009988AE /* AppDelegate.swift in Sources */,
+				A171C97D21310E30008A231C /* CardBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
