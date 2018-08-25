@@ -108,6 +108,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view opaque="NO" contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6f1-u2-eQg" customClass="PlayingCardView" customModule="playingCardWithAnimation" customModuleProvider="target">
+                                <rect key="frame" x="52" y="511" width="73" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qm4-YJ-yz6" customClass="PlayingCardView" customModule="playingCardWithAnimation" customModuleProvider="target">
+                                <rect key="frame" x="147" y="511" width="73" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DIO-Na-5RU" customClass="PlayingCardView" customModule="playingCardWithAnimation" customModuleProvider="target">
+                                <rect key="frame" x="250" y="511" width="73" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -122,6 +152,9 @@
                         <outletCollection property="cardViews" destination="PtP-jC-nYM" collectionClass="NSMutableArray" id="5XM-pd-cU8"/>
                         <outletCollection property="cardViews" destination="793-wb-Fy9" collectionClass="NSMutableArray" id="car-ZI-6MM"/>
                         <outletCollection property="cardViews" destination="do7-nQ-Mj6" collectionClass="NSMutableArray" id="TvG-M7-ryZ"/>
+                        <outletCollection property="cardViews" destination="6f1-u2-eQg" collectionClass="NSMutableArray" id="Efc-kP-lUM"/>
+                        <outletCollection property="cardViews" destination="Qm4-YJ-yz6" collectionClass="NSMutableArray" id="jet-sc-sEK"/>
+                        <outletCollection property="cardViews" destination="DIO-Na-5RU" collectionClass="NSMutableArray" id="jM3-Bv-NGr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

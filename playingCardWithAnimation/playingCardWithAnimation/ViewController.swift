@@ -13,7 +13,28 @@ class ViewController: UIViewController {
     private var deck = PlayingCardDeck()
     
     //IBOutlet Collection
-    @IBOutlet var cardViews: [PlayingCardView]!
+    @IBOutlet private var cardViews: [PlayingCardView]!
+    
+    lazy var animator = UIDynamicAnimator(referenceView: view)
+    
+    //moving toward the frame
+    lazy var collisionBehavior: UICollisionBehavior = {
+       let behavior = UICollisionBehavior()
+        behavior.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(behavior)
+        return behavior
+    }()
+    
+    //continue moving
+    lazy var itemBehavior: UIDynamicItemBehavior = {
+        let behavior = UIDynamicItemBehavior()
+        behavior.allowsRotation = false
+        behavior.elasticity = 1.0 // one point o
+        behavior.resistance = 1
+        animator.addBehavior(behavior)
+        return behavior
+        
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +50,17 @@ class ViewController: UIViewController {
             cardView.rank = card.rank.order
             cardView.suit = card.suit.rawValue
             cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flipCard(_:))))
+            
+            //moving toward the frame
+            collisionBehavior.addItem(cardView)
+            
+            //continue moving
+            itemBehavior.addItem(cardView)
+            
+            let push = UIPushBehavior(items: [cardView], mode: .instantaneous)
+            push.angle = (2 * CGFloat.pi).arc4random
+            push.magnitude = CGFloat(1.0) + CGFloat(2.0).arc4random
+            animator.addBehavior(push)
         }
     }
     
@@ -104,3 +136,9 @@ class ViewController: UIViewController {
     }
 }
 
+public extension CGFloat {
+    var arc4random: CGFloat {
+        return CGFloat(Float(arc4random_uniform(UInt32(self))))
+    }
+    
+}
